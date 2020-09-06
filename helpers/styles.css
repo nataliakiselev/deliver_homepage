@@ -1,0 +1,656 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html { /* PUT THIS IN */
+  font-size: 10px;
+}
+
+body {
+  font-family: plex-sans,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+  font-size: 1.6rem; /* PUT THIS IN */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.typographic-list {
+  list-style: initial;
+  padding: initial;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: stratos,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+  margin: 0 0 35px;
+}
+
+/* GRID */
+
+.container {
+  max-width: 1152px; /* changed to 1152px; */
+  margin: auto;
+}
+
+@media screen and (min-width: 601px) {
+  .half {
+    width: 50%;
+  }
+}
+
+section {
+  padding: 50px 15px;
+}
+
+/* Page Header */
+.main-header {
+  background-color: #00ccbc;
+}
+
+.hero {
+  background: url(../images/backgrounds/pink-shape.svg) no-repeat right center;
+  background-size: auto 540px;
+  background-position: top right;
+}
+
+.hero-image {
+  background-image: url(../images/backgrounds/taco-desktop@2x.png);
+  background-repeat: no-repeat;
+  background-position: calc(75% + 350px) calc(30% + 25px);
+  background-size: 1440px auto,auto 540px;
+}
+
+.logo img {
+  width: 126px;
+  height: 32px;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  margin-left: auto;
+  display: flex;
+}
+
+
+
+.main-nav a,
+.main-nav button {
+  margin: 16px 7px;
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 1px solid #e8ebeb;
+  line-height: 24px;
+  color: #2e3333;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.main-nav a:hover,
+.main-nav a:focus,
+.main-nav button:hover,
+.main-nav button:focus {
+  background-color: #fff;
+  border-color: #d1d4d4;
+}
+
+@media screen and (max-width: 600px) {
+  .main-nav a,
+  .main-nav button:not(.menu_toggle) {
+    display: none;
+  }
+}
+
+.main-nav svg {
+  fill: #00ccbc;
+  margin-right: 8px;
+}
+
+.second-row {
+  padding: 150px 0 32px;
+}
+
+.second-row .main-heading {
+  color: #440063;
+  font-size: 4rem;
+  font-family: stratos,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+  font-weight: 600;
+}
+
+.restaurant-finder {
+  background-color: #fff;
+  padding: 24px 16px;
+  border-radius: 4px;
+  width: calc(100% - 2 * 16px);
+  margin: auto;
+}
+@media screen and (min-width: 601px) {
+  .restaurant-finder {
+    padding: 3.2rem;
+    width: auto;
+    margin: 0;
+  }
+}
+/* .restaurant-finder .postcode {
+  border: none;
+  border-radius: 4px;
+} */
+
+.restaurant-finder .location-finder {
+  border: none;
+  background-color: transparent;
+  color: #00ccbc;
+}
+
+/* min-width: 24px; */
+
+.postcode-input {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.restaurant-finder .input-group {
+  display: flex;
+  border: 1px solid;
+  border-radius: 4px;
+  border: 1px solid #e8ebeb;
+  padding: 4px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.05), inset 0 0 0 100px #fff;
+}
+
+.input-group button {
+  background-color: transparent;
+  border: none;
+}
+
+.address-list li > a {
+  display: flex;
+  align-items: center;
+}
+
+.address-list li span {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+/* Genres Section */
+
+.options h2,
+.genres h2 {
+  font-size: 40px;
+}
+
+.genres-list li {
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 601px) {
+  .genres-list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .genres-list li {
+    flex-grow: 1;
+    flex-basis: 33.33%;
+  }
+
+  .genres-list li:nth-child(4n -1),
+  .genres-list li:nth-child(4n -2) {
+    flex-grow: 2;
+    flex-basis: 66.66%;
+  }
+
+  .genres-list li:nth-child(even) {
+    padding-left: 30px;
+  }
+}
+
+.genres-list .img {
+  display: flex;
+  height: 150px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.genres-list .img.comfort-food {
+  background: url(../images/backgrounds/genres/comfort-food.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.desserts {
+  background: url(../images/backgrounds/genres/desserts.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.office-catering {
+  background: url(../images/backgrounds/genres/office-catering.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.healthy-options {
+  background: url(../images/backgrounds/genres/healthy-options.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.only-on-deliveroo {
+  background: url(../images/backgrounds/genres/only-on-deliveroo.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.big-flavours {
+  background: url(../images/backgrounds/genres/big-flavours-small-prices.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.our-picks {
+  background: url(../images/backgrounds/genres/our-picks.jpg) center/cover no-repeat;
+}
+
+.genres-list .img.deliveroo-editions {
+  background: url(../images/backgrounds/genres/deliveroo-editions.jpg) center/cover no-repeat;
+}
+
+
+.genres-list .img h3 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.15;
+  font-family: stratos,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+}
+
+.genres-list a:hover {
+  text-decoration: none;
+}
+
+.genres-list span {
+  color: #00a396;
+}
+
+/* Vendors */
+.vendors h2 {
+  font-size: 40px;
+  margin: 0 0 35px;
+}
+
+.vendors img {
+  margin-bottom: 10px;
+}
+
+.vendors h3 {
+  font-size: 22px;
+  margin: 0 0 0 4px;
+}
+
+
+/* options section */
+
+.options-list li {
+  border-radius: 5px;
+  background-color: #f9fafa;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 10px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.options-list a {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #2e3333;
+  text-decoration: none;
+}
+
+
+
+/* vendors section */
+.vendors {
+  background-color: #ffeae4;
+  border: 1px solid #ffeae4;
+  padding: 50px 5px 80px;
+}
+
+.vendors h2 {
+  margin-left: 30px;
+}
+
+.vendor-list {
+  padding: 0;
+  list-style: none;
+}
+
+.vendor-list li {
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 601px) {
+  .vendor-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .vendor-list li {
+    width: 33.33%;
+    padding-left: 30px;
+  }
+}
+.vendor-list li img {
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Homepage Marketing */
+.homepage-marketing {
+  background: #f9fafa;
+  overflow: hidden;
+  padding: 50px 5px 80px;
+}
+
+.homepage-marketing h2 {
+  font-size: 40px;
+}
+
+button {
+  color: #fff;
+  background: #00ccbc;
+  transition: box-shadow .15s ease-out;
+  min-height: 48px;
+  padding: 12px 24px;
+  position: relative;
+  z-index: 2;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-family: plex-sans,sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 24px;
+  margin: 0;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+}
+
+button:hover,
+button:focus {
+  background: #00c2b3;
+}
+
+.homepage-marketing .corporate {
+  background: url(../images/backgrounds/sales/business.jpg) left/50% no-repeat;
+  padding-left: 50%;
+  min-height: 220px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.homepage-marketing .platforms {
+  background: url(../images/backgrounds/sales/apps.svg) right/50% no-repeat;
+  padding-right: 50%;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+.homepage-marketing .corporate .flavour-text,
+.homepage-marketing .platforms .flavour-text {
+  background-color: #fff;
+  padding: 10px;
+  min-height: 220px;
+  position: relative;
+}
+
+@media screen and (min-width: 601px) {
+  .homepage-marketing .corporate .flavour-text,
+  .homepage-marketing .platforms .flavour-text {
+    padding: 40px;
+  }
+}
+
+.homepage-marketing .flavour-text h3 {
+  font-size: 28px;
+  font-family: stratos,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+  margin: 0 0 20px;
+}
+
+.homepage-marketing .corporate .flavour-text::after,
+.homepage-marketing .platforms .flavour-text::after {
+  content: " ";
+  width: 40px;
+  height: 120%;
+  background: #fff;
+  position: absolute;
+  z-index: 1;
+}
+
+.homepage-marketing .get {
+  display: none;
+}
+
+@media screen and (min-width: 601px) {
+  .homepage-marketing .get {
+    display: block;
+  }
+}
+
+.homepage-marketing .corporate .flavour-text::after {
+  transform: rotate(6deg);
+  left: -12px;
+  top: -10px;
+}
+
+.homepage-marketing .platforms .flavour-text::after {
+  transform: rotate(6deg);
+  right: -12px;
+  top: -10px;
+}
+
+.stores li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.platform {
+  width: 135px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: 270px 40px;
+  background-image: url(../images/backgrounds/app-store-badges-en.svg);
+}
+
+.platform.ios {
+  background-position: 0 0;
+}
+
+.platform.android {
+  background-position: -140px 0;
+}
+
+/* work with us */
+.work-with-us {
+  background-color: #fff;
+}
+
+.work-with-us h3 {
+  font-size: 40px;
+  font-family: stratos,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+}
+
+.starting-points > div {
+  margin-bottom: 30px;
+  position: relative;
+  padding-top: 282px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+}
+
+@media screen and (min-width: 601px) {
+  .starting-points {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .starting-points > div {
+    margin-left: 30px;
+    flex: 1;
+    /* position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%; */
+  }
+
+  .starting-points div:first-child {
+    margin-left: 0;
+  }
+}
+
+.starting-points .riders {
+  background-image: url(../images/backgrounds/work/riders.jpg);
+}
+
+.starting-points .riders .flavour-text {
+  background-color: #ff483b;
+}
+
+.starting-points .restaurants {
+  background-image: url(../images/backgrounds/work/restaurants.jpg);
+}
+
+.starting-points .restaurants .flavour-text {
+  background-color: #ff8100;
+}
+
+.starting-points .careers {
+  background-image: url(../images/backgrounds/work/team.jpg);
+}
+
+.starting-points .careers .flavour-text {
+  background-color: #bac3c3;
+}
+
+.starting-points .flavour-text {
+  padding: 30px;
+  color: #fff;
+}
+
+.starting-points .flavour-text h4 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+main {
+  margin-bottom: 80px;
+}
+
+/* Footer */
+.page-footer {
+  background-color: #2e3333;
+  min-height: 300px;
+  color: #fff;
+}
+
+.page-footer nav {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 24px 0 0;
+}
+
+/* .page-footer nav {
+  display: flex;
+  flex-flow: row wrap;
+} */
+
+.page-footer nav .col {
+  flex: 1;
+  min-width: 224px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  padding: 24px;
+  margin-left: 16px;
+}
+
+.page-footer nav .col:first-child {
+  margin-left: 0;
+}
+
+.page-footer nav h2 {
+  font-size: 1.8rem;
+  line-height: 1.33;
+  font-weight: 600;
+}
+
+.page-footer nav li {
+  font-size: 1.4rem;
+  line-height: 1.35;
+  margin-bottom: 5px;
+}
+
+.page-footer .ios {
+  margin-bottom: 15px;
+}
+
+.end {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.end .social {
+  display: flex;
+  margin: 0;
+}
+
+.end p {
+  margin: 0;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* END */
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}

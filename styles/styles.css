@@ -1,0 +1,504 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 9px;
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: plex-sans,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+  font-size: 1.6rem; /* PUT THIS IN */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.typographic-list {
+  list-style: initial;
+  padding: initial;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: stratos,Helvetica Neue,Helvetica,Arial,Microsoft YaHei,"\5FAE\8F6F\96C5\9ED1\4F53",Hiragino Sans GB,"\51AC\9752\9ED1\4F53",sans-serif;
+  margin: 0 0 35px;
+}
+
+p {
+  margin-top: 0;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* GRID: Use a grid system or CSS grid */
+.container {
+  max-width: 1152px;
+  margin: auto;
+}
+
+/* @media (min-width) */
+section {
+  padding: 50px 20px;
+}
+
+/* Page Header */
+
+
+/* GENRES */
+.genres-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.genres-list li {
+  flex-grow: 1;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+@media (min-width: 481px) {
+  .genres-list li {flex-basis: calc(50% - 30px);
+  }
+}
+
+@media (min-width: 980px) {
+.genres-list li {
+  flex-basis: calc(40% - 30px);
+  
+}
+
+.genres-list li:nth-child(even) {
+  margin-right: 0;
+  flex-basis: 40%;
+}
+
+.genres-list li:nth-child(4n+2),
+.genres-list li:nth-child(4n+3) {
+  flex-grow: 2;
+  flex-basis: calc(60% - 30px);
+ }
+}
+
+.genres-list .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+  background: #000 center/cover no-repeat;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.genres-list .comfort-food {
+  background-image: url(../images/backgrounds/genres/comfort-food.jpg);
+}
+
+.genres-list .img.desserts {
+  background-image: url(../images/backgrounds/genres/desserts.jpg);
+}
+.genres-list .img.office-catering {
+  background-image: url(../images/backgrounds/genres/office-catering.jpg);
+}
+.genres-list .img.healthy-options {
+  background-image: url(../images/backgrounds/genres/healthy-options.jpg);
+}
+.genres-list .img.only-on-deliveroo {
+  background-image: url(../images/backgrounds/genres/only-on-deliveroo.jpg);
+}
+
+.genres-list .img.big-flavours {
+  background-image: url(../images/backgrounds/genres/big-flavours-small-prices.jpg);
+}
+
+.genres-list .img.our-picks {
+  background-image: url(../images/backgrounds/genres/our-picks.jpg);
+}
+
+.genres-list .img.deliveroo-editions {
+  background-image: url(../images/backgrounds/genres/deliveroo-editions.jpg);
+}
+h2,
+.genres-list .img h3 {
+font-size: 4rem;
+font-weight: 600;
+line-height: 1.15;
+}
+
+.genres-list .img h3 {
+  margin-bottom: 0;
+}
+
+.genres .faux-link {
+ color: #00a396;
+ display: block;;
+ margin-top: 10px;
+}
+
+.vendor-list {
+  display: flex;
+  flex-flow: row wrap;
+  line-height: 2.24rem;
+}
+
+.vendor-list img {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+.vendor-list li {
+  width: calc(33.33% - 20px);
+}
+.vendor-list li {
+  margin-right: 30px;
+}
+.vendor-list li:nth-child(3n) {
+  margin-right: 0;
+}
+}
+.vendors {
+  background-color: #FEF0F0;
+}
+.vendors h3 {
+  margin-bottom: 4px;
+  font-size: 2.2rem;
+}
+
+.options h2 {
+  margin-bottom: 16px;
+}
+.options-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.options-list li {
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #f9fafa;
+  padding: 5px 10px;
+  margin-right: 16px;
+  margin-top: 16px;
+}
+
+.homepage-marketing {
+  background-color: #f9fafa;
+}
+.homepage-marketing h3 {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+.corporate, 
+.platforms {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+ .corporate {
+  justify-content: flex-end;
+  height: 210px;
+  background-image: url(../images/backgrounds/sales/business.jpg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: left;
+  
+ }
+
+.platforms {
+  height: 127px;
+  justify-content: flex-start;
+  background-image: url(../images/backgrounds/sales/apps.svg) ;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: right;
+} 
+@media (max-width: 768px) {
+p.get {
+  display: none;
+ }
+}
+
+@media (max-width: 500px) {
+.platforms {
+    height: 149px;
+ }
+}
+@media (min-width: 621px){
+  .platforms {
+     height: 87px;
+  }
+}
+@media (min-width: 601px) {
+ .homepage-marketing h3 {
+    font-size: 2.8rem;
+  }
+}
+
+.corporate .flavour-text,
+.platforms .flavour-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50%;
+  padding: 10px;
+}
+
+@media (min-width: 768px){
+  .platforms {
+    height: 228px;
+  }
+  .corporate {
+    height: 236px;
+  }
+  .corporate .flavour-text,
+  .platforms .flavour-text {
+    padding: 40px;
+ }
+ .homepage-marketing h3 {
+    margin-bottom: 20px;
+  }
+}
+
+
+button {
+  background-color: #00ccbc;
+  color: #fff;
+  font-weight: 600px;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.stores {
+  display: flex;
+  flex-wrap: wrap;
+}
+.stores li a {
+  display: inline-flex;
+  height: 40px;
+  width: 135px;
+}
+
+.platform.ios {
+  background-image: url(../images/backgrounds/app-store-badges-en.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.platform.android {
+  background-image: url(../images/backgrounds/app-store-badges-en.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:  -136px center;
+}
+
+.starting-points{
+display: flex;
+flex-wrap: wrap; 
+}
+
+.riders,
+.restaurants,
+.careers {
+  height: 530px;
+  /* flex: 1; */
+  width: 100%;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat; 
+  margin-bottom: 15px;
+  display: flex;
+  align-content: flex-end;
+}
+
+@media (max-width: 768px){
+  .starting-points h4 {
+    font-size: 2.8rem;
+  }
+}
+/* @media (min-width: 490px) and (max-width: 768px) {
+  .riders,
+.restaurants,
+.careers {
+  background-size: auto 70%;
+ }
+} */
+@media (min-width: 768px) {
+.riders,
+.restaurants,
+.careers {
+  width: calc(33.33% - 20px);
+  
+ }
+ .starting-points h4 {
+   font-size: 3.6rem;
+ }
+ .starting-points :nth-child(2),
+ .starting-points :nth-child(3) {
+   margin-left: 30px;
+  }
+}
+
+.riders .flavour-text,
+.restaurants .flavour-text,
+.careers .flavour-text {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-end;
+  /* align-items: baseline; */
+  /* height: 100%; */
+  /* flex-direction: column;
+  justify-content: flex-end; */
+  padding: 30px;
+  text-align: left;
+  color: #fff;
+}
+
+.starting-points .flavour-text p,
+.starting-points .flavour-text  button {
+  margin-left: 0px;
+}
+
+
+.work-with-us h3, h4 {
+  font-size: 4rem;
+}
+
+.work-with-us h4 {
+  margin-bottom: 10px;
+}
+
+.riders {
+ background-color: #ff483b;
+ background-image: url(../images/backgrounds/work/riders.jpg);   
+
+}
+
+.restaurants {
+    background-color: #ff8100;
+    background-image: url(../images/backgrounds/work/restaurants.jpg);
+}
+
+.careers {
+    background-color: #bac3c3;
+    background-image: url(../images/backgrounds/work/team.jpg);
+}
+
+.page-footer  {
+    background-color: #2e3333; 
+    color: #fff;
+    padding: 24px 30px;
+}
+
+.page-footer h3 {
+  margin-bottom: 8px;
+}
+.page-footer ul {
+  margin: 0;
+}
+
+.page-footer nav {
+  overflow-x: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.col {
+  height: 260px;
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-bottom: 24px;
+  width: calc(25% - 15px);
+  min-width: 224px;
+  background-color: hsla(0,0%, 100%, 0.1);
+  padding: 24px;
+  
+}
+.col li {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+.page-footer nav :nth-child(1) {
+  margin-left: 0;
+}
+
+.col .stores {
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+
+.col .platform.ios {
+margin-bottom: 10px;
+} 
+
+.col .platform.android {
+  background-position: -136px;
+}
+
+.end {
+  display: flex;
+  justify-content: space-between;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+}
+
+.social li {
+  margin-right: 20px;
+}
+
+.end p {
+  color: #828585;
+  font-size: 1.4rem;
+}
+/* END */
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}

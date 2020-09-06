@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "plex-sans";
+  src: url(./../fonts/IBMPlexSans-Regular.woff2) format("woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "plex-sans";
+  src: url(./../fonts/IBMPlexSans-Bold.woff2) format("woff2");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "stratos";
+  src: url("./../fonts/stratos-semibold.woff2") format("woff2")
+}
